@@ -2240,3 +2240,127 @@ footer {
     display: block; /* Display the dropdown menu */
   }
   
+
+
+/* October 2026 portfolio refresh: photo, experience, projects and skills */
+#about .dp::before,
+#about .dp::after { content: none !important; display: none !important; box-shadow: none !important; }
+#about .dp { align-items: flex-start; padding: 0 0 0 1.5rem; }
+#about .dp img {
+  display: block; width: min(100%, 330px); height: auto; object-fit: cover;
+  border: 1px solid var(--tech-stack-box-border-color); border-radius: 14px;
+  box-shadow: 0 16px 38px var(--color-shadowDark);
+}
+.portfolio-experience-section { padding: 55px 20px 100px; }
+#experience .experience-section-inner { width: min(1100px, 92%); align-items: stretch; }
+#experience .section-heading { margin-bottom: 12px; }
+.experience-lead, .featured-intro {
+  margin: 12px 0 32px; color: var(--color-ddd-color);
+  opacity: .85; font-size: clamp(1.5rem, 1.6vw, 1.9rem); line-height: 1.6;
+}
+.experience-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; width: 100%; }
+.experience-card {
+  min-width: 0; padding: clamp(24px, 3vw, 34px); border-radius: 20px;
+  border: 1px solid var(--tech-stack-box-border-color);
+  background: linear-gradient(to bottom right, var(--tech-stack-box-first-color), var(--tech-stack-box-second-color));
+  box-shadow: 0 10px 28px var(--color-shadowDark);
+  display: flex; flex-direction: column; align-items: flex-start;
+}
+.experience-card-top { display: flex; width: 100%; justify-content: space-between; align-items: center; gap: 14px; margin-bottom: 20px; }
+.experience-index, .featured-number { color: var(--color-light-purple); font: 600 1.6rem 'Fira Code', monospace; }
+.experience-period { color: var(--color-gray); font-size: 1.35rem; text-align: right; }
+.experience-card h3 { color: var(--color-white); font-size: clamp(2rem, 2vw, 2.5rem); line-height: 1.3; font-weight: 650; margin: 0 0 7px; }
+.experience-company { color: var(--color-light-purple); font-size: 1.65rem; margin: 0 0 20px; font-weight: 500; }
+.experience-description { color: var(--color-ddd-color); font-size: 1.65rem; line-height: 1.75; margin: 0 0 24px; max-width: 65ch; }
+.experience-tags, .featured-tech-tags { display:flex; flex-wrap:wrap; gap: 9px; margin-top:auto; }
+.experience-tags span, .featured-tech-tags span {
+  font-size: 1.2rem; line-height:1.4; color: var(--color-ddd-color); padding: 7px 11px;
+  background: var(--tech-stack-box-first-color); border: 1px solid var(--tech-stack-box-border-color); border-radius: 999px;
+}
+.featured-work-section { width:100%; padding: 140px 20px 30px; display:flex; justify-content:center; }
+.featured-work-inner { width: min(1160px, 92%); }
+.featured-work-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 22px; }
+.featured-work-card {
+  min-width:0; padding: 30px; border: 1px solid var(--tech-stack-box-border-color);
+  border-radius: 22px; background: linear-gradient(to bottom right, var(--tech-stack-box-first-color), var(--tech-stack-box-second-color));
+  display:flex; flex-direction:column; min-height:360px;
+  box-shadow:0 12px 30px var(--color-shadowDark); transition: transform .25s ease, border-color .25s ease;
+}
+.featured-work-card:hover { transform: translateY(-6px); border-color: var(--color-purple); }
+.featured-card-top { display:flex; justify-content:space-between; align-items:flex-start; gap:12px; margin-bottom:28px; }
+.featured-category { font-size:1.2rem; color:var(--color-gray); text-align:right; line-height:1.4; }
+.featured-work-card h3 { color: var(--color-white); font-size: clamp(2.1rem, 2vw, 2.6rem); line-height:1.3; margin:0 0 18px; }
+.featured-work-card p { font-size:1.6rem; line-height:1.75; margin:0 0 26px; color:var(--color-ddd-color); }
+#skills .tech-stack-wrapper { gap: 22px; margin-top: 35px; padding: 0; list-style:none; }
+#skills .tech-stack-box {
+  width: 128px; height: 128px; flex: 0 0 128px; border-radius: 22px;
+  transition: transform .22s ease, border-color .22s ease;
+}
+#skills .tech-stack-box:hover { transform: translateY(-5px); border-color: var(--color-purple); }
+#skills .tech-stack-box img {
+  display:block; width: 74px; height: 74px; max-width:74px; max-height:74px;
+  object-fit: contain; padding: 2px;
+}
+@media (max-width: 960px) {
+  .featured-work-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .experience-grid { gap: 18px; }
+  #skills .tech-stack-box { width: 112px; height:112px; flex-basis:112px; }
+  #skills .tech-stack-box img { width: 68px; height:68px; max-width:68px; max-height:68px; }
+}
+@media (max-width: 720px) {
+  #experience .experience-section-inner, .featured-work-inner { width: 100%; }
+  .experience-grid, .featured-work-grid { grid-template-columns: 1fr; }
+  .experience-card, .featured-work-card { padding: 24px; min-height:auto; }
+  .portfolio-experience-section { padding: 45px 18px 80px; }
+  .featured-work-section { padding: 75px 18px 20px; }
+  .experience-card h3, .featured-work-card h3 { font-size: 2.4rem; }
+  .experience-description, .featured-work-card p { font-size:1.75rem; }
+  #about .dp { padding: 0; }
+  #skills .tech-stack-wrapper { display:flex; gap:14px; }
+  #skills .tech-stack-box { width:96px; height:96px; flex: 0 0 96px; }
+  #skills .tech-stack-box img { width:58px; height:58px; max-width:58px; max-height:58px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .featured-work-card, #skills .tech-stack-box { transition: none; }
+}
+
+
+/* ION Software Solutions web project preview — existing portfolio theme only */
+.project-box-ion .ion-project-preview {
+  padding: 38px 28px 28px 5px; display: flex; align-items: center;
+  justify-content: center; min-width: 0; overflow: hidden;
+}
+.ion-browser-frame {
+  width: 100%; max-width: 480px; height: 270px; border-radius: 12px;
+  overflow: hidden; border: 1px solid var(--tech-stack-box-border-color);
+  background: var(--tech-stack-box-first-color);
+  box-shadow: 0 15px 36px var(--color-shadowDark);
+}
+.ion-browser-bar {
+  height: 32px; display:flex; align-items:center; gap: 6px;
+  padding: 0 12px; border-bottom: 1px solid var(--tech-stack-box-border-color);
+}
+.ion-browser-bar > span { width: 7px; height: 7px; border: 1px solid var(--color-gray); border-radius: 50%; }
+.ion-browser-bar small {
+  margin: 0 auto; color: var(--color-gray); font: 1rem 'Fira Code', monospace;
+}
+.ion-preview-content { padding: 18px; }
+.ion-preview-top { display:flex; justify-content:space-between; align-items:center; gap: 10px; }
+.ion-preview-top strong { font-size: 1.8rem; color: var(--color-white); letter-spacing: .08em; }
+.ion-preview-top span { font-size: .85rem; color: var(--color-gray); }
+.ion-preview-hero { display:flex; flex-direction:column; align-items:flex-start; gap: 10px; padding: 24px 0 20px; }
+.ion-preview-hero > span { font-size: .95rem; color: var(--color-light-purple); letter-spacing: .08em; }
+.ion-preview-hero strong { font-size: 2.1rem; line-height:1.2; color: var(--color-white); font-weight: 700; }
+.ion-preview-hero i { display:block; width: 66px; height: 8px; border-radius: 6px; background: var(--color-purple); }
+.ion-preview-panels { display:grid; grid-template-columns:repeat(3,1fr); gap: 9px; }
+.ion-preview-panels span { height: 30px; border: 1px solid var(--tech-stack-box-border-color); border-radius: 5px; }
+@media (max-width: 1024px) {
+ .project-box-ion .ion-project-preview { padding: 25px 20px; }
+ .ion-browser-frame { height: 245px; }
+}
+@media (max-width: 768px) {
+ .project-box-ion { height: auto; min-height: 590px; }
+ .project-box-ion .info-div { height:auto; min-height: 290px; padding: 30px; }
+ .project-box-ion .ion-project-preview { height: 275px; padding: 0 20px 25px; }
+ .ion-browser-frame { height: 245px; }
+}

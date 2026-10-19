@@ -2323,3 +2323,44 @@ footer {
 @media (prefers-reduced-motion: reduce) {
   .featured-work-card, #skills .tech-stack-box { transition: none; }
 }
+
+
+/* ION Software Solutions web project preview — existing portfolio theme only */
+.project-box-ion .ion-project-preview {
+  padding: 38px 28px 28px 5px; display: flex; align-items: center;
+  justify-content: center; min-width: 0; overflow: hidden;
+}
+.ion-browser-frame {
+  width: 100%; max-width: 480px; height: 270px; border-radius: 12px;
+  overflow: hidden; border: 1px solid var(--tech-stack-box-border-color);
+  background: var(--tech-stack-box-first-color);
+  box-shadow: 0 15px 36px var(--color-shadowDark);
+}
+.ion-browser-bar {
+  height: 32px; display:flex; align-items:center; gap: 6px;
+  padding: 0 12px; border-bottom: 1px solid var(--tech-stack-box-border-color);
+}
+.ion-browser-bar > span { width: 7px; height: 7px; border: 1px solid var(--color-gray); border-radius: 50%; }
+.ion-browser-bar small {
+  margin: 0 auto; color: var(--color-gray); font: 1rem 'Fira Code', monospace;
+}
+.ion-preview-content { padding: 18px; }
+.ion-preview-top { display:flex; justify-content:space-between; align-items:center; gap: 10px; }
+.ion-preview-top strong { font-size: 1.8rem; color: var(--color-white); letter-spacing: .08em; }
+.ion-preview-top span { font-size: .85rem; color: var(--color-gray); }
+.ion-preview-hero { display:flex; flex-direction:column; align-items:flex-start; gap: 10px; padding: 24px 0 20px; }
+.ion-preview-hero > span { font-size: .95rem; color: var(--color-light-purple); letter-spacing: .08em; }
+.ion-preview-hero strong { font-size: 2.1rem; line-height:1.2; color: var(--color-white); font-weight: 700; }
+.ion-preview-hero i { display:block; width: 66px; height: 8px; border-radius: 6px; background: var(--color-purple); }
+.ion-preview-panels { display:grid; grid-template-columns:repeat(3,1fr); gap: 9px; }
+.ion-preview-panels span { height: 30px; border: 1px solid var(--tech-stack-box-border-color); border-radius: 5px; }
+@media (max-width: 1024px) {
+ .project-box-ion .ion-project-preview { padding: 25px 20px; }
+ .ion-browser-frame { height: 245px; }
+}
+@media (max-width: 768px) {
+ .project-box-ion { height: auto; min-height: 590px; }
+ .project-box-ion .info-div { height:auto; min-height: 290px; padding: 30px; }
+ .project-box-ion .ion-project-preview { height: 275px; padding: 0 20px 25px; }
+ .ion-browser-frame { height: 245px; }
+}
